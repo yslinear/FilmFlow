@@ -11,16 +11,15 @@ import SwiftData
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
     @Query private var cameras: [Camera]
+    @State private var isPresentingCameraEditView = false
 
     var body: some View {
         NavigationSplitView {
             List {
-                ForEach(cameras) { camera in
-                    NavigationLink {
-                        Text("Camera at \(camera.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                    } label: {
-                        Text(camera.name)
-                    }
+                ForEach(cameras) {camera in
+                    NavigationLink(camera.name,
+                        destination: CameraEditView(camera: camera)
+                    )
                 }
                 .onDelete(perform: deleteCameras)
             }
