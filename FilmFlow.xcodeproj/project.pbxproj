@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2227B5832BB820A100A0CB92 /* CameraEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2227B5822BB820A100A0CB92 /* CameraEditView.swift */; };
+		2227B5852BB837F900A0CB92 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2227B5842BB837F900A0CB92 /* InfoView.swift */; };
 		227952962BB7E254007E7CA2 /* FilmFlowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227952952BB7E254007E7CA2 /* FilmFlowApp.swift */; };
 		2279529A2BB7E254007E7CA2 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227952992BB7E254007E7CA2 /* Camera.swift */; };
 		2279529C2BB7E255007E7CA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2279529B2BB7E255007E7CA2 /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		2227B5822BB820A100A0CB92 /* CameraEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraEditView.swift; sourceTree = "<group>"; };
+		2227B5842BB837F900A0CB92 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		227952922BB7E254007E7CA2 /* FilmFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FilmFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		227952952BB7E254007E7CA2 /* FilmFlowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmFlowApp.swift; sourceTree = "<group>"; };
 		227952992BB7E254007E7CA2 /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 			children = (
 				227D0C3F2BB81AAE00C9025A /* CameraListView.swift */,
 				2227B5822BB820A100A0CB92 /* CameraEditView.swift */,
+				2227B5842BB837F900A0CB92 /* InfoView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -162,6 +165,7 @@
 				2227B5832BB820A100A0CB92 /* CameraEditView.swift in Sources */,
 				227D0C402BB81AAE00C9025A /* CameraListView.swift in Sources */,
 				2279529A2BB7E254007E7CA2 /* Camera.swift in Sources */,
+				2227B5852BB837F900A0CB92 /* InfoView.swift in Sources */,
 				227952962BB7E254007E7CA2 /* FilmFlowApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

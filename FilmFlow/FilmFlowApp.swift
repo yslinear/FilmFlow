@@ -25,7 +25,16 @@ struct FilmFlowApp: App {
 
     var body: some Scene {
         WindowGroup {
-            CameraListView()
+            TabView {
+                CameraListView()
+                    .tabItem {
+                        Label("Camera List", systemImage: "camera")
+                    }
+                InfoView()
+                    .tabItem {
+                        Label("Info", systemImage: "info")
+                    }
+            }
         }
         .modelContainer(sharedModelContainer)
     }
