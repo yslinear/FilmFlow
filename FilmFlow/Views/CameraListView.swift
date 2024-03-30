@@ -24,9 +24,6 @@ struct CameraListView: View {
                 .onDelete(perform: deleteCameras)
             }
             .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
                 ToolbarItem {
                     Button(action: addCamera) {
                         Label("Add Camera", systemImage: "plus")
