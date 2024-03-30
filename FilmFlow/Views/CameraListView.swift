@@ -39,8 +39,7 @@ struct CameraListView: View {
     }
 
     private func addCamera() {
-        // FIXME: generate random name
-        let randomName = "Camera \(Int.random(in: 1...1000))"
+        let randomName = "Camera - \(Date.timeIntervalSinceReferenceDate)"
         withAnimation {
             let newCamera = Camera(name: randomName, timestamp: Date())
             modelContext.insert(newCamera)
