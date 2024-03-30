@@ -25,7 +25,7 @@ struct FilmFlowApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CameraListView()
         }
         .modelContainer(sharedModelContainer)
     }

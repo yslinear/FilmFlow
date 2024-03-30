@@ -8,7 +8,7 @@
 import SwiftUI
 import SwiftData
 
-struct ContentView: View {
+struct CameraListView: View {
     @Environment(\.modelContext) private var modelContext
     @Query private var cameras: [Camera]
     @State private var isPresentingCameraEditView = false
@@ -65,6 +65,6 @@ struct ContentView: View {
         container.mainContext.insert(camera)
     }
 
-    return ContentView()
+    return CameraListView()
         .modelContainer(container)
 }
