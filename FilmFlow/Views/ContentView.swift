@@ -15,11 +15,11 @@ struct ContentView: View {
     var body: some View {
         NavigationSplitView {
             List {
-                ForEach(cameras) { item in
+                ForEach(cameras) { camera in
                     NavigationLink {
-                        Text("Camera at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
+                        Text("Camera at \(camera.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
                     } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
+                        Text(camera.name)
                     }
                 }
                 .onDelete(perform: deleteCameras)
@@ -35,13 +35,15 @@ struct ContentView: View {
                 }
             }
         } detail: {
-            Text("Select an item")
+            Text("Select an camera")
         }
     }
 
     private func addCamera() {
+        // FIXME: generate random name
+        let randomName = "Camera \(Int.random(in: 1...1000))"
         withAnimation {
-            let newCamera = Camera(timestamp: Date())
+            let newCamera = Camera(name: randomName, timestamp: Date())
             modelContext.insert(newCamera)
         }
     }
@@ -56,6 +58,14 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
-        .modelContainer(for: Camera.self, inMemory: true)
+    let config = ModelConfiguration(isStoredInMemoryOnly: true)
+    let container = try! ModelContainer(for: Camera.self, configurations: config)
+
+    for i in 1...10 {
+        let camera = Camera(name: "Camera \(i)", timestamp: Date())
+        container.mainContext.insert(camera)
+    }
+
+    return ContentView()
+        .modelContainer(container)
 }

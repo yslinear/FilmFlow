@@ -10,9 +10,11 @@ import SwiftData
 
 @Model
 final class Camera {
+    var name: String
     var timestamp: Date
-    
-    init(timestamp: Date) {
+
+    init(name: String, timestamp: Date) {
+        self.name = name
         self.timestamp = timestamp
     }
 }
