@@ -30,6 +30,10 @@ struct FilmFlowApp: App {
                     .tabItem {
                         Label("Camera List", systemImage: "camera")
                     }
+                LightMeterView()
+                    .tabItem {
+                        Label("Light Meter", systemImage: "circle.lefthalf.striped.horizontal")
+                    }
                 InfoView()
                     .tabItem {
                         Label("Info", systemImage: "info")
