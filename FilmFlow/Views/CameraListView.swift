@@ -21,7 +21,7 @@ struct CameraListView: View {
                                    destination: CameraEditView(camera: camera)
                     )
                 }
-                .onDelete(perform: deleteCameras)
+                .onDelete(perform: deleteCamera)
             }
             .toolbar {
                 ToolbarItem {
@@ -43,7 +43,7 @@ struct CameraListView: View {
         }
     }
 
-    private func deleteCameras(offsets: IndexSet) {
+    private func deleteCamera(offsets: IndexSet) {
         withAnimation {
             for index in offsets {
                 modelContext.delete(cameras[index])
