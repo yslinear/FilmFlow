@@ -13,13 +13,13 @@ struct CameraEditView: View {
     @Bindable var camera: Camera
 
     var body: some View {
-           Form {
-               Section(header: Text("Camera Info")) {
-                    TextField("Name", text: $camera.name)
-                    DatePicker("Timestamp", selection: $camera.timestamp)
-               }
-           }
-       }
+        Form {
+            Section(header: Text("Camera Info")) {
+                TextField("Name", text: $camera.name)
+                DatePicker("Timestamp", selection: $camera.timestamp)
+            }
+        }
+    }
 }
 
 

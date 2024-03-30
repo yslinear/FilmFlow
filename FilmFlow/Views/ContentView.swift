@@ -18,7 +18,7 @@ struct ContentView: View {
             List {
                 ForEach(cameras) {camera in
                     NavigationLink(camera.name,
-                        destination: CameraEditView(camera: camera)
+                                   destination: CameraEditView(camera: camera)
                     )
                 }
                 .onDelete(perform: deleteCameras)
