@@ -53,8 +53,8 @@
 		227952942BB7E254007E7CA2 /* FilmFlow */ = {
 			isa = PBXGroup;
 			children = (
+				227952A52BB7E2D0007E7CA2 /* Views */,
 				227952952BB7E254007E7CA2 /* FilmFlowApp.swift */,
-				227952972BB7E254007E7CA2 /* ContentView.swift */,
 				227952992BB7E254007E7CA2 /* Item.swift */,
 				2279529B2BB7E255007E7CA2 /* Assets.xcassets */,
 				2279529D2BB7E255007E7CA2 /* Preview Content */,
@@ -68,6 +68,14 @@
 				2279529E2BB7E255007E7CA2 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		227952A52BB7E2D0007E7CA2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				227952972BB7E254007E7CA2 /* ContentView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
