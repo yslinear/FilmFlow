@@ -9,7 +9,7 @@ import Foundation
 import SwiftData
 
 @Model
-final class Camera {
+final class Camera: Identifiable {
     var name: String
     var timestamp: Date
 
