@@ -12,7 +12,7 @@ import CoreLocationUI
 class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     let manager = CLLocationManager()
 
-    @Published var location: CLLocationCoordinate2D?
+    @Published var location: CLLocation?
 
     override init() {
         super.init()
@@ -37,7 +37,7 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     }
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        location = locations.first?.coordinate
+        location = locations.last ?? CLLocation()
     }
 
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {

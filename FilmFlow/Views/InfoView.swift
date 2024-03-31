@@ -27,9 +27,9 @@ struct InfoView: View {
             }
             Section(header: Text("Location")) {
                 if let location = locationManager.location {
-                    Text("Latitude: \(location.latitude)")
-                    Text("Longitude: \(location.longitude)")
-                    Text("Altitude: \(locationManager.manager.location?.altitude ?? 0)")
+                    Text("Latitude: \(location.coordinate.latitude)")
+                    Text("Longitude: \(location.coordinate.longitude)")
+                    Text("Altitude: \(location.altitude)")
                 } else {
                     Button(action: {
                         locationManager.requestLocation()
