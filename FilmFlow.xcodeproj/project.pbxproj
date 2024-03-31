@@ -10,6 +10,7 @@
 		221952DE2BB956D200A5BBB4 /* MockedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221952DD2BB956D200A5BBB4 /* MockedData.swift */; };
 		221952E02BB958CB00A5BBB4 /* CameraListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221952DF2BB958CB00A5BBB4 /* CameraListView.swift */; };
 		2227B5872BB83D1300A0CB92 /* LightMeterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2227B5862BB83D1300A0CB92 /* LightMeterView.swift */; };
+		2236640E2BB95A6100E22566 /* CameraConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2236640D2BB95A6100E22566 /* CameraConstant.swift */; };
 		227952962BB7E254007E7CA2 /* FilmFlowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227952952BB7E254007E7CA2 /* FilmFlowApp.swift */; };
 		2279529A2BB7E254007E7CA2 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227952992BB7E254007E7CA2 /* Camera.swift */; };
 		2279529C2BB7E255007E7CA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2279529B2BB7E255007E7CA2 /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 		221952DD2BB956D200A5BBB4 /* MockedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedData.swift; sourceTree = "<group>"; };
 		221952DF2BB958CB00A5BBB4 /* CameraListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraListView.swift; sourceTree = "<group>"; };
 		2227B5862BB83D1300A0CB92 /* LightMeterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightMeterView.swift; sourceTree = "<group>"; };
+		2236640D2BB95A6100E22566 /* CameraConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraConstant.swift; sourceTree = "<group>"; };
 		227952922BB7E254007E7CA2 /* FilmFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FilmFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		227952952BB7E254007E7CA2 /* FilmFlowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmFlowApp.swift; sourceTree = "<group>"; };
 		227952992BB7E254007E7CA2 /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
@@ -44,6 +46,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2236640C2BB95A4200E22566 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				2236640D2BB95A6100E22566 /* CameraConstant.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		227952892BB7E254007E7CA2 = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +73,7 @@
 		227952942BB7E254007E7CA2 /* FilmFlow */ = {
 			isa = PBXGroup;
 			children = (
+				2236640C2BB95A4200E22566 /* Constants */,
 				22B337FF2BB87A0000ADBA9F /* Managers */,
 				22EDAD602BB7F5A500D9583D /* Models */,
 				227952A52BB7E2D0007E7CA2 /* Views */,
@@ -181,6 +192,7 @@
 			files = (
 				221952DE2BB956D200A5BBB4 /* MockedData.swift in Sources */,
 				22F9D7062BB91F8300BF25D6 /* CameraEditView.swift in Sources */,
+				2236640E2BB95A6100E22566 /* CameraConstant.swift in Sources */,
 				2279529A2BB7E254007E7CA2 /* Camera.swift in Sources */,
 				22B338012BB87A1000ADBA9F /* LocationManager.swift in Sources */,
 				227952962BB7E254007E7CA2 /* FilmFlowApp.swift in Sources */,
