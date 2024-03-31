@@ -17,6 +17,11 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     override init() {
         super.init()
         manager.delegate = self
+        manager.desiredAccuracy = kCLLocationAccuracyBest
+        manager.requestWhenInUseAuthorization()
+        manager.requestAlwaysAuthorization()
+        manager.requestTemporaryFullAccuracyAuthorization(withPurposeKey: "To obtain altitude and improve accuracy.")
+        manager.startUpdatingLocation()
     }
 
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {

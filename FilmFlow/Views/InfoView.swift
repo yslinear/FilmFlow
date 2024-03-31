@@ -26,16 +26,19 @@ struct InfoView: View {
                 Text("Current Timezone: \(TimeZone.current.identifier) UTC \(TimeZone.current.secondsFromGMT() >= 0 ? "+" : "-")\(abs(TimeZone.current.secondsFromGMT()) / 3600)")
             }
             Section(header: Text("Location")) {
-                if let location = locationManager.location {
-                    Text("Latitude: \(location.coordinate.latitude)")
-                    Text("Longitude: \(location.coordinate.longitude)")
-                    Text("Altitude: \(location.altitude)")
-                } else {
-                    Button(action: {
-                        locationManager.requestLocation()
-                    }) {
-                        Text("Get Location")
+                switch locationManager.manager.authorizationStatus {
+                case .authorizedAlways, .authorizedWhenInUse:
+                    if let location = locationManager.location {
+                        Text("Latitude: \(location.coordinate.latitude)")
+                        Text("Longitude: \(location.coordinate.longitude)")
+                        Text("Altitude: \(location.altitude)")
                     }
+                case .denied:
+                    Text("Location access denied")
+                case .notDetermined, .restricted:
+                    Text("Location access not determined, Please enable location access in Settings")
+                @unknown default:
+                    Text("Unknown location access status")
                 }
             }
         }
