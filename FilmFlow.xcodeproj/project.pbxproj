@@ -22,7 +22,6 @@
 		2227B5822BB820A100A0CB92 /* CameraEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraEditView.swift; sourceTree = "<group>"; };
 		2227B5842BB837F900A0CB92 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		2227B5862BB83D1300A0CB92 /* LightMeterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightMeterView.swift; sourceTree = "<group>"; };
-		2274D3412BB9109800D6E9C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		227952922BB7E254007E7CA2 /* FilmFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FilmFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		227952952BB7E254007E7CA2 /* FilmFlowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmFlowApp.swift; sourceTree = "<group>"; };
 		227952992BB7E254007E7CA2 /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
@@ -62,7 +61,6 @@
 		227952942BB7E254007E7CA2 /* FilmFlow */ = {
 			isa = PBXGroup;
 			children = (
-				2274D3412BB9109800D6E9C5 /* Info.plist */,
 				22B337FF2BB87A0000ADBA9F /* Managers */,
 				22EDAD602BB7F5A500D9583D /* Models */,
 				227952A52BB7E2D0007E7CA2 /* Views */,
