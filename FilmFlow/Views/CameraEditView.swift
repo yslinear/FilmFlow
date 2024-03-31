@@ -38,8 +38,7 @@ struct CameraEditView: View {
 #Preview {
     let config = ModelConfiguration(isStoredInMemoryOnly: true)
     let container = try! ModelContainer(for: Camera.self, configurations: config)
-    let camera = Camera(name: "Name String", timestamp: Date())
 
-    return CameraEditView(camera: camera)
+    return CameraEditView(camera: Camera.mockedData[0])
         .modelContainer(container)
 }

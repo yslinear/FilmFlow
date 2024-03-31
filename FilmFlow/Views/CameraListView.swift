@@ -56,8 +56,7 @@ struct CameraListView: View {
     let config = ModelConfiguration(isStoredInMemoryOnly: true)
     let container = try! ModelContainer(for: Camera.self, configurations: config)
 
-    for i in 1...10 {
-        let camera = Camera(name: "Camera \(i)", timestamp: Date())
+    for camera in Camera.mockedData {
         container.mainContext.insert(camera)
     }
 
