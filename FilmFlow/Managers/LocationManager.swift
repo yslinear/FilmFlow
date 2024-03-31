@@ -21,7 +21,6 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
         manager.requestWhenInUseAuthorization()
         manager.requestAlwaysAuthorization()
         manager.requestTemporaryFullAccuracyAuthorization(withPurposeKey: "To obtain altitude and improve accuracy.")
-        manager.startUpdatingLocation()
     }
 
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
@@ -51,5 +50,13 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
 
     func requestLocation() {
         manager.requestLocation()
+    }
+
+    func start () {
+        manager.startUpdatingLocation()
+    }
+
+     func stop() {
+        manager.stopUpdatingLocation()
     }
 }

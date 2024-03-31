@@ -42,6 +42,12 @@ struct InfoView: View {
                 }
             }
         }
+        .onAppear {
+            locationManager.start()
+        }
+        .onDisappear {
+            locationManager.stop()
+        }
     }
 }
 
