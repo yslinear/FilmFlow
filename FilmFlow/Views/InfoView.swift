@@ -13,7 +13,8 @@ struct InfoView: View {
     @State var timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     @State var timeNow = ""
     let dateFormatter = DateFormatter()
-    
+    @StateObject var locationManager = LocationManager()
+
     var body: some View {
         List {
             Section(header: Text("Time")) {
@@ -24,6 +25,19 @@ struct InfoView: View {
                     .onAppear(perform: {dateFormatter.dateFormat = "LLLL dd, hh:mm:ss a"})
                 Text("Current Timezone: \(TimeZone.current.identifier) UTC \(TimeZone.current.secondsFromGMT() >= 0 ? "+" : "-")\(abs(TimeZone.current.secondsFromGMT()) / 3600)")
             }
+            Section(header: Text("Location")) {
+                if let location = locationManager.location {
+                    Text("Latitude: \(location.latitude)")
+                    Text("Longitude: \(location.longitude)")
+                    Text("Altitude: \(locationManager.manager.location?.altitude ?? 0)")
+                } else {
+                    Button(action: {
+                        locationManager.requestLocation()
+                    }) {
+                        Text("Get Location")
+                    }
+                }
+            }
         }
     }
 }
@@ -31,7 +45,7 @@ struct InfoView: View {
 #Preview {
     let config = ModelConfiguration(isStoredInMemoryOnly: true)
     let container = try! ModelContainer(configurations: config)
-    
+
     return InfoView()
         .modelContainer(container)
 }

@@ -15,18 +15,21 @@
 		2279529C2BB7E255007E7CA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2279529B2BB7E255007E7CA2 /* Assets.xcassets */; };
 		2279529F2BB7E255007E7CA2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2279529E2BB7E255007E7CA2 /* Preview Assets.xcassets */; };
 		227D0C402BB81AAE00C9025A /* CameraListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227D0C3F2BB81AAE00C9025A /* CameraListView.swift */; };
+		22B338012BB87A1000ADBA9F /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B338002BB87A1000ADBA9F /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2227B5822BB820A100A0CB92 /* CameraEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraEditView.swift; sourceTree = "<group>"; };
 		2227B5842BB837F900A0CB92 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		2227B5862BB83D1300A0CB92 /* LightMeterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightMeterView.swift; sourceTree = "<group>"; };
+		2274D3412BB9109800D6E9C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		227952922BB7E254007E7CA2 /* FilmFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FilmFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		227952952BB7E254007E7CA2 /* FilmFlowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmFlowApp.swift; sourceTree = "<group>"; };
 		227952992BB7E254007E7CA2 /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
 		2279529B2BB7E255007E7CA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2279529E2BB7E255007E7CA2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		227D0C3F2BB81AAE00C9025A /* CameraListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraListView.swift; sourceTree = "<group>"; };
+		22B338002BB87A1000ADBA9F /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +62,8 @@
 		227952942BB7E254007E7CA2 /* FilmFlow */ = {
 			isa = PBXGroup;
 			children = (
+				2274D3412BB9109800D6E9C5 /* Info.plist */,
+				22B337FF2BB87A0000ADBA9F /* Managers */,
 				22EDAD602BB7F5A500D9583D /* Models */,
 				227952A52BB7E2D0007E7CA2 /* Views */,
 				227952952BB7E254007E7CA2 /* FilmFlowApp.swift */,
@@ -85,6 +90,14 @@
 				2227B5862BB83D1300A0CB92 /* LightMeterView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		22B337FF2BB87A0000ADBA9F /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				22B338002BB87A1000ADBA9F /* LocationManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		22EDAD602BB7F5A500D9583D /* Models */ = {
@@ -168,6 +181,7 @@
 				2227B5832BB820A100A0CB92 /* CameraEditView.swift in Sources */,
 				227D0C402BB81AAE00C9025A /* CameraListView.swift in Sources */,
 				2279529A2BB7E254007E7CA2 /* Camera.swift in Sources */,
+				22B338012BB87A1000ADBA9F /* LocationManager.swift in Sources */,
 				2227B5852BB837F900A0CB92 /* InfoView.swift in Sources */,
 				227952962BB7E254007E7CA2 /* FilmFlowApp.swift in Sources */,
 				2227B5872BB83D1300A0CB92 /* LightMeterView.swift in Sources */,
@@ -307,6 +321,9 @@
 				DEVELOPMENT_TEAM = TAHZ49J7Z6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FilmFlow/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -336,6 +353,9 @@
 				DEVELOPMENT_TEAM = TAHZ49J7Z6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FilmFlow/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
