@@ -29,7 +29,7 @@ struct LightMeterView: View {
             }
             Divider()
             GridRow {
-                Text("test string")
+                Text("ISO: \(manager.videoDevice?.iso ?? 0)")
             }
         }
     }

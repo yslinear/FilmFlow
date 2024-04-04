@@ -7,15 +7,17 @@
 
 import AVFoundation
 import CoreImage
+import UIKit
 
 class CameraManager: NSObject, ObservableObject {
     @Published var frame: CGImage?
+    @Published var videoDevice: AVCaptureDevice?
 
     private var permissionGranted = true
     private let captureSession = AVCaptureSession()
+    private var videoOutput: AVCaptureVideoDataOutput!
     private let sessionQueue = DispatchQueue(label: "sessionQueue")
     private let context = CIContext()
-
 
     override init() {
         super.init()
@@ -48,18 +50,21 @@ class CameraManager: NSObject, ObservableObject {
     }
 
     func setupCaptureSession() {
-        let videoOutput = AVCaptureVideoDataOutput()
+        self.videoOutput = AVCaptureVideoDataOutput()
 
         guard permissionGranted else { return }
         guard let videoDevice = AVCaptureDevice.default(.builtInDualWideCamera,for: .video, position: .back) else { return }
+        DispatchQueue.main.async { [unowned self] in
+            self.videoDevice = videoDevice
+        }
         guard let videoDeviceInput = try? AVCaptureDeviceInput(device: videoDevice) else { return }
         guard captureSession.canAddInput(videoDeviceInput) else { return }
         captureSession.addInput(videoDeviceInput)
 
-        videoOutput.setSampleBufferDelegate(self, queue: DispatchQueue(label: "sampleBufferQueue"))
+        self.videoOutput.setSampleBufferDelegate(self, queue: DispatchQueue(label: "sampleBufferQueue"))
         captureSession.addOutput(videoOutput)
 
-        videoOutput.connection(with: .video)?.videoRotationAngle = 0
+        self.videoOutput.connection(with: .video)?.videoRotationAngle = 90
     }
     func stopCaptureSession() {
         sessionQueue.async { [unowned self] in
