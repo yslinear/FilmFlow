@@ -11,10 +11,10 @@ import SwiftData
 @Model
 final class Camera: Identifiable {
     var name: String
-    var timestamp: Date
+    var maxShutterSpeed: String
 
-    init(name: String, timestamp: Date) {
+    init(name: String = "Camera - \(Date.timeIntervalSinceReferenceDate)", maxShutterSpeed: String = CameraConstant.maxShutterSpeeds[0]) {
         self.name = name
-        self.timestamp = timestamp
+        self.maxShutterSpeed = maxShutterSpeed
     }
 }

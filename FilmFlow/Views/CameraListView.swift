@@ -36,9 +36,8 @@ struct CameraListView: View {
     }
 
     private func addCamera() {
-        let randomName = "Camera - \(Date.timeIntervalSinceReferenceDate)"
         withAnimation {
-            let newCamera = Camera(name: randomName, timestamp: Date())
+            let newCamera = Camera()
             modelContext.insert(newCamera)
         }
     }
