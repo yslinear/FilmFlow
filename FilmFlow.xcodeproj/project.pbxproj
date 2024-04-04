@@ -16,8 +16,8 @@
 		2279529F2BB7E255007E7CA2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2279529E2BB7E255007E7CA2 /* Preview Assets.xcassets */; };
 		22B338012BB87A1000ADBA9F /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B338002BB87A1000ADBA9F /* LocationManager.swift */; };
 		22DB25962BBEC2B00024B4CC /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DB25952BBEC2B00024B4CC /* CameraManager.swift */; };
-		22DB259A2BBEE9D40024B4CC /* LightMeterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DB25992BBEE9D40024B4CC /* LightMeterView.swift */; };
 		22DB259E2BBEECDD0024B4CC /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DB259D2BBEECDD0024B4CC /* InfoView.swift */; };
+		22DB25A02BBF1E3C0024B4CC /* LightMeterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DB259F2BBF1E3C0024B4CC /* LightMeterView.swift */; };
 		22F9D7062BB91F8300BF25D6 /* CameraEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F9D7052BB91F8300BF25D6 /* CameraEditView.swift */; };
 /* End PBXBuildFile section */
 
@@ -32,8 +32,8 @@
 		2279529E2BB7E255007E7CA2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		22B338002BB87A1000ADBA9F /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		22DB25952BBEC2B00024B4CC /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
-		22DB25992BBEE9D40024B4CC /* LightMeterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightMeterView.swift; sourceTree = "<group>"; };
 		22DB259D2BBEECDD0024B4CC /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		22DB259F2BBF1E3C0024B4CC /* LightMeterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightMeterView.swift; sourceTree = "<group>"; };
 		22F9D7052BB91F8300BF25D6 /* CameraEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraEditView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,8 +99,8 @@
 			children = (
 				22F9D7052BB91F8300BF25D6 /* CameraEditView.swift */,
 				221952DF2BB958CB00A5BBB4 /* CameraListView.swift */,
-				22DB25992BBEE9D40024B4CC /* LightMeterView.swift */,
 				22DB259D2BBEECDD0024B4CC /* InfoView.swift */,
+				22DB259F2BBF1E3C0024B4CC /* LightMeterView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -196,9 +196,9 @@
 				221952DE2BB956D200A5BBB4 /* MockedData.swift in Sources */,
 				22F9D7062BB91F8300BF25D6 /* CameraEditView.swift in Sources */,
 				2236640E2BB95A6100E22566 /* CameraConstant.swift in Sources */,
-				22DB259A2BBEE9D40024B4CC /* LightMeterView.swift in Sources */,
 				2279529A2BB7E254007E7CA2 /* Camera.swift in Sources */,
 				22DB25962BBEC2B00024B4CC /* CameraManager.swift in Sources */,
+				22DB25A02BBF1E3C0024B4CC /* LightMeterView.swift in Sources */,
 				22B338012BB87A1000ADBA9F /* LocationManager.swift in Sources */,
 				227952962BB7E254007E7CA2 /* FilmFlowApp.swift in Sources */,
 				221952E02BB958CB00A5BBB4 /* CameraListView.swift in Sources */,
