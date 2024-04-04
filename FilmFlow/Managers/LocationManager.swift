@@ -56,7 +56,7 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
         manager.startUpdatingLocation()
     }
 
-     func stop() {
+    func stop() {
         manager.stopUpdatingLocation()
     }
 }
