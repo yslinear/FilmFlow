@@ -53,7 +53,10 @@ class CameraManager: NSObject, ObservableObject {
         self.videoOutput = AVCaptureVideoDataOutput()
 
         guard permissionGranted else { return }
-        guard let videoDevice = AVCaptureDevice.default(.builtInDualWideCamera,for: .video, position: .back) else { return }
+        guard let videoDevice = AVCaptureDevice.default(.builtInDualCamera, for: .video, position: .back) ?? AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .back) else {
+            fatalError("Missing expected back camera device.")
+        }
+
         DispatchQueue.main.async { [unowned self] in
             self.videoDevice = videoDevice
         }
